@@ -5,6 +5,7 @@ ENV PYTHONPATH="${PYTHONPATH}:/app"
 
 COPY requirements.txt ./
 COPY constitution_docs.json ./
+COPY minsky_docs.json ./
 RUN pip install -r requirements.txt
 COPY . /app/
 CMD ["python","-u","chroma/chroma.py"]
